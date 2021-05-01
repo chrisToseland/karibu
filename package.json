@@ -1,0 +1,12 @@
+{
+    "name": "Karibu",
+    "description": "Edge computing at home",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows_birke.json",
+            "credentialsFile": "flows_birke_cred.json"
+        }
+    }
+}
