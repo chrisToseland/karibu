@@ -143,9 +143,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
+        "payload": "{ \"name\" : \"toseland\"}",
+        "payloadType": "json",
+        "x": 210,
         "y": 480,
         "wires": [
             [
