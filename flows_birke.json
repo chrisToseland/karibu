@@ -7,6 +7,31 @@
         "info": ""
     },
     {
+        "id": "e3b1b276.64a89",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
         "id": "a46d3d1a.60ea3",
         "type": "grove-light-sensor-v1_2",
         "z": "9efe0965.d62e08",
@@ -75,7 +100,7 @@
         "y": 300,
         "wires": [
             [
-                "56ff0984.697ce8"
+                "aa7ecedf.34e298"
             ]
         ]
     },
@@ -107,22 +132,6 @@
                 "91be5914.e0bd88"
             ]
         ]
-    },
-    {
-        "id": "56ff0984.697ce8",
-        "type": "debug",
-        "z": "9efe0965.d62e08",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 300,
-        "wires": []
     },
     {
         "id": "43d8fb29.6dcfec",
@@ -167,6 +176,60 @@
         "statusType": "auto",
         "x": 470,
         "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cd22f309.1a9be8",
+        "type": "mqtt in",
+        "z": "9efe0965.d62e08",
+        "name": "",
+        "topic": "packt",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "e3b1b276.64a89",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "3a22f74a.989588"
+            ]
+        ]
+    },
+    {
+        "id": "aa7ecedf.34e298",
+        "type": "mqtt out",
+        "z": "9efe0965.d62e08",
+        "name": "",
+        "topic": "packt",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e3b1b276.64a89",
+        "x": 710,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3a22f74a.989588",
+        "type": "debug",
+        "z": "9efe0965.d62e08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 380,
         "wires": []
     }
 ]
